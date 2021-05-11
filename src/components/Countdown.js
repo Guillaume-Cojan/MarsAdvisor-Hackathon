@@ -45,7 +45,7 @@ function Countdown() {
             <img
                 className="countdown-img"
                 src="https://cdn.pixabay.com/photo/2012/04/10/17/23/spaceship-26556_960_720.png"
-                alt="space ship"
+                alt="spaceship"
             />
             <div className="countdown-info">
                 <div className="flight-info">

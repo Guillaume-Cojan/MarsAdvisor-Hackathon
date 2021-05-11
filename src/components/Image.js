@@ -6,7 +6,7 @@ const Image = ({ images, routeProps }) => {
     console.log(foundMatch);
     return (
         <div className="img-component-container">
-            <img className="img-hd" src={foundMatch.url} alt="hd picture" />
+            <img className="img-hd" src={foundMatch.url} alt="hd image" />
             <div className="img-details-container">
                 <h1 className="img-title">{foundMatch.title}</h1>
                 <p className="img-explanation">
