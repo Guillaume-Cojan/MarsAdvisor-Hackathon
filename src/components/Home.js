@@ -1,6 +1,7 @@
 import Countdown from "./Countdown";
 import { Switch, Route, Link } from "react-router-dom";
 
+
 function Home({ handleSelectedPlanet }) {
   return (
     <div>
@@ -19,6 +20,7 @@ function Home({ handleSelectedPlanet }) {
           {" "}
           Explore the Galaxy
         </button>
+
       </Link>
       <Countdown />
     </div>
