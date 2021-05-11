@@ -47,9 +47,12 @@ function App() {
         <Route path="/planet">
           <ImageList images={images} selectedPlanet={selectedPlanet} />
         </Route>
-        <Route path="/:id">
-          <Image />
-        </Route>
+        <Route
+          path="/:date"
+          render={(routeProps) => (
+            <Image routeProps={routeProps} images={images} />
+          )}
+        />
         <Route path="/favorites">
           <Favorites />
         </Route>
