@@ -41,42 +41,34 @@ function Countdown() {
         );
     });
     return (
-        <div className="countdown">
+        <div className="countdown-desktop">
             <img
                 className="countdown-img"
                 src="https://cdn.pixabay.com/photo/2012/04/10/17/23/spaceship-26556_960_720.png"
                 alt="spaceship"
             />
-            <div className="countdown-info">
-                <div className="flight-info">
-                    <div className="flight-from">
-                        <h3 className="h3-countdown">Next departure from:</h3>
-                        <h2 className="h2-countdown">Mars</h2>
-                    </div>
-                    <div className="flight-to">
-                        <h3 className="h3-countdown">Destination to:</h3>
-                        <h2 className="h2-countdown">Earth</h2>
-                    </div>
-                    <div className="flight-ship">
-                        <h3 className="h3-countdown">Spaceship type:</h3>
-                        <h2 className="h2-countdown">
-                            ERO (Earth Return Orbiter)
-                        </h2>
-                    </div>
-                    <div className="flight-airline">
-                        <h3 className="h3-countdown">Airline:</h3>
-                        <h2 className="h2-countdown">
-                            NASA (Operated by Space X)
-                        </h2>
-                    </div>
-                </div>
-                <div className="timer">
-                    {timerComponents.length ? (
-                        timerComponents
-                    ) : (
-                        <span>Go to Gate!</span>
-                    )}
-                </div>
+            <div className="table">
+                <table className="countdown-info">
+                    <tr>
+                        <th>Next departure from:</th>
+                        <th>Destination to:</th>
+                        <th>Spaceship to:</th>
+                        <th>Airline:</th>
+                    </tr>
+                    <tr>
+                        <td>Mars</td>
+                        <td>Earth</td>
+                        <td>ERO (Earth Return Orbiter)</td>
+                        <td>NASA (Operated by Space X)</td>
+                    </tr>
+                </table>
+            </div>
+            <div className="timer">
+                {timerComponents.length ? (
+                    timerComponents
+                ) : (
+                    <span>Go to Gate!</span>
+                )}
             </div>
         </div>
     );

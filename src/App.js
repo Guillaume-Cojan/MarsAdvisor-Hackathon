@@ -28,6 +28,10 @@ function App() {
     };
 
     useEffect(getData, []);
+    const [favorites, setFavorites] = useState([]);
+    const handleFavorite = (imageInfo) => {
+        setFavorites([...favorites], imageInfo);
+    };
 
     console.log(images);
     return (
@@ -45,11 +49,15 @@ function App() {
                 <Route
                     path="/:date"
                     render={(routeProps) => (
-                        <Image routeProps={routeProps} images={images} />
+                        <Image
+                            routeProps={routeProps}
+                            images={images}
+                            handleFavorite={handleFavorite}
+                        />
                     )}
                 />
                 <Route path="/favorites">
-                    <Favorites />
+                    <Favorites favoritesList={favorites} />
                 </Route>
             </Switch>
             <Footer />

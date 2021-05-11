@@ -1,23 +1,24 @@
 /*STYLING OF COUNTDOWN COMPONENT*/
 
 .h2-countdown {
-    color: black;
+    color: #1b0317;
 }
 
-.countdown {
-    border: 1px solid black;
+.countdown-desktop {
+    border: 2px solid #7b1b7a;
+    border-radius: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin: 20px;
-    padding: 50px;
+    padding: 10px;
 }
 
 .countdown-img {
-    width: 200px;
-    height: 200px;
-    margin: 30px;
+    width: 100px;
+    height: 100px;
+    margin: 0px;
 }
 
 .countdown-info {
@@ -41,7 +42,7 @@
 .flight-airline {
     width: 150px;
     border: 1px solid black;
-    margin: 15px;
+    margin: 5px;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -52,9 +53,24 @@
 
 .timer {
     font-family: "Audiowide", cursive;
-    font-size: 30px;
-    margin-top: 50px;
+    font-size: 25px;
+    margin-top: 20px;
     margin-bottom: 20px;
+}
+
+tr {
+    width: 700px;
+}
+
+th {
+    background-color: #7b1b7a;
+    color: white;
+    width: 25%;
+}
+
+td {
+    width: 25%;
+    text-align: center;
 }
 
 /*STYLING OF  IMAGE COMPONENT*/
@@ -78,4 +94,23 @@
 
 .img-explanation {
     text-align: justify;
+}
+
+.add-favorite {
+    background-color: violet;
+    border: 1px solid #7b1b7a;
+    border-radius: 15px;
+    margin: 5px;
+    padding: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    .timer {
+        font-family: "Audiowide", cursive;
+        font-size: 15px;
+    }
+
+    tr {
+        width: 250px;
+    }
 }
