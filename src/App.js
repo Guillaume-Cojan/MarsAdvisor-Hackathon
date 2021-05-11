@@ -16,14 +16,17 @@ import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab, faCheckSquare);
 
-
-
 function App() {
   const [images, setImages] = useState([]);
+  const [selectedPlanet, setSelectedPlanet] = useState("");
+
+  function handleSelectedPlanet(key) {
+    setSelectedPlanet(key.target.id);
+  }
 
   const getData = () => {
     fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
+      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-04-10&end_date=2021-05-10"
     )
       .then((response) => response.json())
       .then((data) => setImages(data));
@@ -39,10 +42,10 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route exact path="/">
-          <Home />
+          <Home handleSelectedPlanet={handleSelectedPlanet} />
         </Route>
         <Route path="/planet">
-          <ImageList images={images} />
+          <ImageList images={images} selectedPlanet={selectedPlanet} />
         </Route>
         <Route path="/:id">
           <Image />
