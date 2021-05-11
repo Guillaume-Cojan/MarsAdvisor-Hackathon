@@ -1,9 +1,14 @@
-const Image = ({ images, routeProps }) => {
+import { useState } from "react";
+
+const Image = ({ date, images, routeProps, handleFavorite }) => {
     const foundMatch = images.find(
         (image) => image.date == routeProps.match.params.date
     );
-
-    console.log(foundMatch);
+    const [isFavorite, setIsFavorite] = useState(false);
+    const handleClick = () => {
+        setIsFavorite(!isFavorite);
+        handleFavorite(date);
+    };
     return (
         <div className="img-component-container">
             <img className="img-hd" src={foundMatch.url} alt="hd image" />
@@ -17,6 +22,9 @@ const Image = ({ images, routeProps }) => {
                 <p className="img-copyright">
                     Copyright: {foundMatch.copyright}
                 </p>
+                <div className="add-favorite" onClick={handleClick}>
+                    Add this Picture to My Favorites: {isFavorite ? "💜" : "🤍"}
+                </div>
             </div>
         </div>
     );
