@@ -8,6 +8,7 @@ import Favorites from "./components/Favorites";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
@@ -33,6 +34,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
         <Route exact path="/">
           <Home />
         </Route>
@@ -45,7 +47,6 @@ function App() {
         <Route path="/favorites">
           <Favorites />
         </Route>
-        <Route path="/about" component={About} />
       </Switch>
       <Footer />
     </div>
