@@ -1,10 +1,13 @@
 import "./ImageList.css";
+import { Link } from "react-router-dom";
 
-function ImageCard( { url }) {
+function ImageCard( { url, image }) {
     return (
         <div className="images-container">
             <div className="image-container">
-                <img src={url} alt="planet image" />
+               <Link to={`/:title`} {...image}>
+                    <img src={url} alt="planet image" />
+               </Link>
             </div>
         </div>
        
