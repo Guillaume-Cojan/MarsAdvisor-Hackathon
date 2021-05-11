@@ -92,6 +92,11 @@
     padding: 0;
   }
 
+  .nav-logo {
+    background: none;
+    margin: 0;
+  }
+
   .nav-icon {
     display: block;
   }
