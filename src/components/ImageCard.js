@@ -5,7 +5,7 @@ function ImageCard( { url, image }) {
     return (
         <div className="images-container">
             <div className="image-container">
-               <Link to={`/:title`} {...image}>
+               <Link to={`/:title`} {...image}render >
                     <img src={url} alt="planet image" />
                </Link>
             </div>
