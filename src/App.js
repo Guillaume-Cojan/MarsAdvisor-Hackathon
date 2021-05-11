@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import ImageList from "./components/ImageList";
-import Navbar from "./components/Navbar/Navbar"; 
+import Navbar from "./components/Navbar/Navbar";
 import Image from "./components/Image";
 import Favorites from "./components/Favorites";
 import Footer from "./components/Footer/Footer";
@@ -12,9 +12,11 @@ function App() {
   const [images, setImages] = useState([]);
 
   const getData = () => {
-    fetch("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-      .then((res) => res.json())
-      .then((data) => setImages(images.data));
+    fetch(
+      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh"
+    )
+      .then((response) => response.json())
+      .then((data) => setImages(data));
   };
 
   useEffect(getData, []);
@@ -27,7 +29,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/planet">
-          <ImageList images={images}/>
+          <ImageList images={images} />
         </Route>
         <Route path="/:id">
           <Image />
