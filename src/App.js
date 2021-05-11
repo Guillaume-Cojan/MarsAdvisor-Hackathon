@@ -60,7 +60,7 @@ function App() {
                     )}
                 />
                 <Route path="/favorites">
-                    <Favorites />
+                    <Favorites favoritesList={favorites} />
                 </Route>
             </Switch>
             <Footer />
