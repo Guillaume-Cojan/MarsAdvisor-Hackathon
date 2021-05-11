@@ -1,0 +1,17 @@
+.member-img {
+  border-radius: 50%;
+  border: 5px solid white;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}
+
+.icons {
+  margin: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+h2 {
+  margin: 20px 0;
+}
