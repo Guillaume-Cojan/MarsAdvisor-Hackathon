@@ -7,6 +7,7 @@ import Image from "./components/Image";
 import Favorites from "./components/Favorites";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home";
+import About from "./components/About/About";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
@@ -16,21 +17,22 @@ library.add(fab, faCheckSquare);
 function App() {
   const [images, setImages] = useState([]);
 
-  // const getData = () => {
-  //   fetch(
-  //     "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => setImages(data));
-  // };
+  const getData = () => {
+    fetch(
+      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
+    )
+      .then((response) => response.json())
+      .then((data) => setImages(data));
+  };
 
-  // useEffect(getData, []);
+  useEffect(getData, []);
 
-  // console.log(images);
+  console.log(images);
   return (
     <div className="App">
       <Navbar />
       <Switch>
+        <Route path="/about" component={About} />
         <Route exact path="/">
           <Home />
         </Route>
@@ -43,6 +45,7 @@ function App() {
         <Route path="/favorites">
           <Favorites />
         </Route>
+        <Route path="/about" component={About} />
       </Switch>
       <Footer />
     </div>
