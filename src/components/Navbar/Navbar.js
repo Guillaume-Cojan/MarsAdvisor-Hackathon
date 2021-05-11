@@ -18,7 +18,7 @@ function Navbar() {
           </NavLink>
 
           <ul className={menu ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
+            <li className="nav-item" onClick={handleMenu}>
               <NavLink
                 exact
                 to="/"
@@ -28,7 +28,7 @@ function Navbar() {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" onClick={handleMenu}>
               <NavLink
                 exact
                 to="/favorites"
@@ -38,7 +38,7 @@ function Navbar() {
                 My Favorites
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" onClick={handleMenu}>
               <NavLink
                 exact
                 to="/about"
@@ -48,7 +48,7 @@ function Navbar() {
                 About
               </NavLink>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" onClick={handleMenu}>
               <NavLink
                 exact
                 to="/contact"
