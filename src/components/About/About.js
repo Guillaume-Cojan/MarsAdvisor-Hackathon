@@ -5,34 +5,30 @@ const memberInfo = [
   {
     name: "Francesco",
     surname: "Luciani",
-    img:
-      "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
+    img: "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
     linkedin: "https://www.linkedin.com/in/lucianifrancesco/",
     github: "https://github.com/francescoluciani",
   },
   {
-    name: "Francesco",
-    surname: "Luciani",
-    img:
-      "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
-    linkedin: "https://www.linkedin.com/in/lucianifrancesco/",
-    github: "https://github.com/francescoluciani",
+    name: "Guillaume",
+    surname: "Cojan",
+    img: "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
+    linkedin: "https://www.linkedin.com/in/guillaumecojan/",
+    github: "https://github.com/Guillaume-Cojan",
   },
   {
-    name: "Francesco",
-    surname: "Luciani",
-    img:
-      "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
-    linkedin: "https://www.linkedin.com/in/lucianifrancesco/",
-    github: "https://github.com/francescoluciani",
+    name: "Silvia",
+    surname: "Cabello",
+    img: "https://res.cloudinary.com/dnefeccae/image/upload/v1620764628/helenpictures/silvia_yrsxmn.jpg",
+    linkedin: "https://www.linkedin.com/in/silviacabellom/",
+    github: "https://github.com/SilviaCabello",
   },
   {
-    name: "Francesco",
-    surname: "Luciani",
-    img:
-      "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
-    linkedin: "https://www.linkedin.com/in/lucianifrancesco/",
-    github: "https://github.com/francescoluciani",
+    name: "Helen .T",
+    surname: "Laurencine .N",
+    img: "https://res.cloudinary.com/dnefeccae/image/upload/v1620764366/helenpictures/helen_fh2cad.jpg",
+    linkedin: "https://www.linkedin.com/in/helen-trisha-laurencine-ndiaye/",
+    github: "https://github.com/HELENTRISHA",
   },
 ];
 
