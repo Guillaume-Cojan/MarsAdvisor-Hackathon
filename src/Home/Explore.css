@@ -1,0 +1,21 @@
+.explore-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.explore-btn {
+  width: 230px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: #7b1b7a;
+  margin: 20px;
+}
+
+.explore-btn:hover {
+  background-color: #86d41a;
+}

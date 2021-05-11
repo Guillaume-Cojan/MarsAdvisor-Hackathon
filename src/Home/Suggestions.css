@@ -3,9 +3,11 @@ p {
 }
 
 img {
-  width: 200px;
-  height: 200px;
+  width: 15rem;
+  height: 15rem;
   margin: 30px;
+  border-radius: 50px;
+  border: 3px solid white;
 }
 
 .suggestions-container {
@@ -16,15 +18,23 @@ img {
 }
 
 .suggestion-card {
-  background-color: aqua;
+  background-color: #7b1b7a;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 40%;
   margin: 10px;
+  border: 3px solid #86d41a;
 }
 
 h1 {
-  margin: 20px;
+  width: 40%;
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 0px 0 20px 0;
+  border: 3px solid #86d41a;
+  color: white;
 }
