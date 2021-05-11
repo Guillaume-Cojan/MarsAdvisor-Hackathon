@@ -1,4 +1,3 @@
-import Countdown from "./Countdown";
 import { Link } from "react-router-dom";
 
 function Explore({ handleSelectedPlanet }) {

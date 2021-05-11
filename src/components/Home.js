@@ -1,14 +1,14 @@
 import Countdown from "./Countdown";
 import Explore from "./Explore";
 import Banner from "./Banner";
-import { Switch, Route, Link } from "react-router-dom";
+import SuggestionsList from "./SuggestionsList";
 
 function Home({ handleSelectedPlanet }) {
   return (
     <div>
-      <Explore />
+      <Explore handleSelectedPlanet={handleSelectedPlanet} />
       <Banner />
-      {/* <Suggestions /> */}
+      <SuggestionsList />
       <Countdown />
     </div>
   );

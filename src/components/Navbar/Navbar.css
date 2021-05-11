@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
   top: 0;
   z-index: 20;
 }
@@ -69,7 +68,7 @@
 .menu {
   width: 40px;
   position: absolute;
-  top: 19px;
+  top: 30px;
   right: 15px;
 }
 
@@ -92,7 +91,7 @@
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
-    padding: 0px 0;
+    padding: 10px 10px;
   }
 
   .nav-logo {
