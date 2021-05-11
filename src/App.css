@@ -1,4 +1,8 @@
-/*STYLING OF CONTDOWN COMPONENT*/
+/*STYLING OF COUNTDOWN COMPONENT*/
+
+.h2-countdown {
+    color: black;
+}
 
 .countdown {
     border: 1px solid black;
@@ -51,4 +55,27 @@
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
+}
+
+/*STYLING OF  IMAGE COMPONENT*/
+
+.img-hd {
+    width: 100%;
+}
+
+.img-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.img-title {
+    text-align: center;
+}
+
+.img-explanation {
+    text-align: justify;
 }
