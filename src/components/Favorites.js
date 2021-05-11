@@ -1,5 +1,11 @@
+
+
+
+const userFavorte =  
+
 function Favorites() {
-    return <p>Favorites component</p>;
+    return <p>My Favorites</p>;
+
 }
 
 export default Favorites;
