@@ -1,5 +1,5 @@
 function Favorites() {
-    return <p>Favorites component</p> 
+    return <p>Favorites component</p>;
 }
 
 export default Favorites;
