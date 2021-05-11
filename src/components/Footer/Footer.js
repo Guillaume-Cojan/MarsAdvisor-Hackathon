@@ -10,20 +10,29 @@ function Footer() {
 
       <div className="icons">
         <a target="_blank" href="https://www.linkedin.com/">
-          <FontAwesomeIcon icon={["fab", "linkedin"]} className="icons" />
+          <FontAwesomeIcon
+            icon={["fab", "linkedin"]}
+            className="icons-footer"
+          />
         </a>
         <a target="_blank" href="https://www.instagram.com/" target="_blank">
-          <FontAwesomeIcon icon={["fab", "instagram"]} className="icons" />
+          <FontAwesomeIcon
+            icon={["fab", "instagram"]}
+            className="icons-footer"
+          />
         </a>
         <a target="_blank" href="https://it-it.facebook.com" target="_blank">
-          <FontAwesomeIcon icon={["fab", "facebook"]} className="icons" />
+          <FontAwesomeIcon
+            icon={["fab", "facebook"]}
+            className="icons-footer"
+          />
         </a>
         <a
           target="_blank"
           href="https://www.youtube.com/watch?v=y5niGi4k9vQ"
           target="_blank"
         >
-          <FontAwesomeIcon icon={["fab", "youtube"]} className="icons" />
+          <FontAwesomeIcon icon={["fab", "youtube"]} className="icons-footer" />
         </a>
       </div>
 
