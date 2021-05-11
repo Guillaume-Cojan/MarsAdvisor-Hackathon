@@ -13,8 +13,12 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            MarsAdvisor
+          <NavLink exact to="/">
+            <img
+              src="https://i.ibb.co/QdcsymB/marsadvisor-logo.png"
+              alt=""
+              className="nav-logo"
+            />
           </NavLink>
 
           <ul className={menu ? "nav-menu active" : "nav-menu"}>

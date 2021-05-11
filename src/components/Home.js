@@ -1,27 +1,14 @@
 import Countdown from "./Countdown";
+import Explore from "./Explore";
+import Banner from "./Banner";
 import { Switch, Route, Link } from "react-router-dom";
-
 
 function Home({ handleSelectedPlanet }) {
   return (
     <div>
-      <Link to="/planet">
-        <button id={"Mars"} onClick={handleSelectedPlanet}>
-          Explore Mars
-        </button>
-      </Link>
-      <Link to="/planet">
-        <button id={"Moon"} onClick={handleSelectedPlanet}>
-          Explore the Moon
-        </button>
-      </Link>
-      <Link to="/planet">
-        <button id={"Galaxy"} onClick={handleSelectedPlanet}>
-          {" "}
-          Explore the Galaxy
-        </button>
-
-      </Link>
+      <Explore />
+      <Banner />
+      {/* <Suggestions /> */}
       <Countdown />
     </div>
   );
