@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Countdown() {
     const calculateTimeLeft = () => {
-        let year = +2026;
+        let year = +2029;
         const difference = +new Date(`${year}-08-31`) - +new Date();
         let timeLeft = {};
 
@@ -45,25 +45,29 @@ function Countdown() {
             <img
                 className="countdown-img"
                 src="https://cdn.pixabay.com/photo/2012/04/10/17/23/spaceship-26556_960_720.png"
-                alt="space ship"
+                alt="spaceship"
             />
             <div className="countdown-info">
                 <div className="flight-info">
                     <div className="flight-from">
-                        <h3>Next departure from:</h3>
-                        <h2>Mars</h2>
+                        <h3 className="h3-countdown">Next departure from:</h3>
+                        <h2 className="h2-countdown">Mars</h2>
                     </div>
                     <div className="flight-to">
-                        <h3>Destination to:</h3>
-                        <h2>Earth</h2>
+                        <h3 className="h3-countdown">Destination to:</h3>
+                        <h2 className="h2-countdown">Earth</h2>
                     </div>
                     <div className="flight-ship">
-                        <h3>Spaceship type:</h3>
-                        <h2>ERO (Earth Return Orbiter)</h2>
+                        <h3 className="h3-countdown">Spaceship type:</h3>
+                        <h2 className="h2-countdown">
+                            ERO (Earth Return Orbiter)
+                        </h2>
                     </div>
                     <div className="flight-airline">
-                        <h3>Airline:</h3>
-                        <h2>NASA (Operated by Space X)</h2>
+                        <h3 className="h3-countdown">Airline:</h3>
+                        <h2 className="h2-countdown">
+                            NASA (Operated by Space X)
+                        </h2>
                     </div>
                 </div>
                 <div className="timer">
