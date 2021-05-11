@@ -6,8 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Image from "./components/Image";
 import Favorites from "./components/Favorites";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Home";
-
+import Home from "./Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -17,13 +16,12 @@ import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, faCheckSquare);
 
 function App() {
-    const [images, setImages] = useState([]);
-    const [selectedPlanet, setSelectedPlanet] = useState("");
+  const [images, setImages] = useState([]);
+  const [selectedPlanet, setSelectedPlanet] = useState("");
 
-    function handleSelectedPlanet(key) {
-        setSelectedPlanet(key.target.id);
-    }
-
+  function handleSelectedPlanet(key) {
+    setSelectedPlanet(key.target.id);
+  }
 
   const getData = () => {
     fetch(
@@ -33,42 +31,34 @@ function App() {
       .then((data) => setImages(data));
   };
 
-    useEffect(getData, []);
-    const [favorites, setFavorites] = useState([]);
-    const handleFavorite = (imageInfo) => {
-        setFavorites([...favorites], imageInfo);
-    };
+  useEffect(getData, []);
 
-    console.log(images);
-    return (
-        <div className="App">
-            <Navbar />
-            <Switch>
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
-                <Route exact path="/">
-                    <Home />
-                </Route>
-                <Route path="/planet">
-                    <ImageList images={images} />
-                </Route>
-                <Route
-                    path="/:date"
-                    render={(routeProps) => (
-                        <Image
-                            routeProps={routeProps}
-                            images={images}
-                            handleFavorite={handleFavorite}
-                        />
-                    )}
-                />
-                <Route path="/favorites">
-                    <Favorites favoritesList={favorites} />
-                </Route>
-            </Switch>
-            <Footer />
-        </div>
-    );
+  console.log(images);
+  return (
+    <div className="App">
+      <Navbar />
+      <Switch>
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route exact path="/">
+          <Home handleSelectedPlanet={handleSelectedPlanet} />
+        </Route>
+        <Route path="/planet">
+          <ImageList images={images} selectedPlanet={selectedPlanet} />
+        </Route>
+        <Route
+          path="/:date"
+          render={(routeProps) => (
+            <Image routeProps={routeProps} images={images} />
+          )}
+        />
+        <Route path="/favorites">
+          <Favorites />
+        </Route>
+      </Switch>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
