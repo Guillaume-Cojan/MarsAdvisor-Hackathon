@@ -31,7 +31,14 @@ function App() {
             .then((data) => setImages(data));
     };
 
-  useEffect(getData, []);
+    useEffect(getData, []);
+
+
+    const [favorites, setFavorites] = useState([]);
+    const handleFavorite = (imageInfo) => {
+        setFavorites([...favorites], imageInfo);
+    };
+
 
     console.log(images);
     return (
