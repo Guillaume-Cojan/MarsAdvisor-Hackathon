@@ -13,7 +13,7 @@ function App() {
 
   const getData = () => {
     fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh"
+      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
     )
       .then((response) => response.json())
       .then((data) => setImages(data));
@@ -21,6 +21,7 @@ function App() {
 
   useEffect(getData, []);
 
+  console.log(images);
   return (
     <div className="App">
       <Navbar />
