@@ -5,11 +5,14 @@ import ImageCard from "./ImageCard";
 function ImageList({ images }) {
   return (
     <div>
-      <h3> Explore the Earth!</h3>
+      <h3> Explore Mars!</h3>
       <div className="ImageList-container">
-        {images.map((image) => (
-          <ImageCard key={image.date} url={image.url} />
-        ))}
+        {images
+          .filter((image) => image.explanation.includes("Mars"))
+          .filter((image) => image.media_type === "image")
+          .map((image) => (
+            <ImageCard key={image.date} {...image} />
+          ))}
       </div>
     </div>
   );
