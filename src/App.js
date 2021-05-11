@@ -16,44 +16,45 @@ import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 
 library.add(fab, faCheckSquare);
 
-
-
 function App() {
-  const [images, setImages] = useState([]);
+    const [images, setImages] = useState([]);
 
-  const getData = () => {
-    fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
-    )
-      .then((response) => response.json())
-      .then((data) => setImages(data));
-  };
+    const getData = () => {
+        fetch(
+            "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
+        )
+            .then((response) => response.json())
+            .then((data) => setImages(data));
+    };
 
-  useEffect(getData, []);
+    useEffect(getData, []);
 
-  console.log(images);
-  return (
-    <div className="App">
-      <Navbar />
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/planet">
-          <ImageList images={images} />
-        </Route>
-        <Route path="/:id">
-          <Image />
-        </Route>
-        <Route path="/favorites">
-          <Favorites />
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
-  );
+    console.log(images);
+    return (
+        <div className="App">
+            <Navbar />
+            <Switch>
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/planet">
+                    <ImageList images={images} />
+                </Route>
+                <Route
+                    path="/:date"
+                    render={(routeProps) => (
+                        <Image routeProps={routeProps} images={images} />
+                    )}
+                />
+                <Route path="/favorites">
+                    <Favorites />
+                </Route>
+            </Switch>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
