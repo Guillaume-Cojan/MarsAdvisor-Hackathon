@@ -1,6 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import "./App.css";
+import ImageList from "./components/ImageList";
+import Navbar from "./components/Navbar/Navbar"; 
+import Image from "./components/Image";
+import Favorites from "./components/Favorites";
+import Footer from "./components/Footer/Footer";
+import Home from "./components/Home";
 
 function App() {
   const [images, setImages] = useState([]);
@@ -20,8 +26,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/:planet">
-          <ImageList />
+        <Route path="/planet">
+          <ImageList images={images}/>
         </Route>
         <Route path="/:id">
           <Image />
