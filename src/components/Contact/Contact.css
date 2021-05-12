@@ -31,7 +31,9 @@ input {
   padding: 10px;
   margin: 10px;
 }
-
+select {
+  width: 90%;
+}
 label {
   text-align: center;
   margin: auto;
