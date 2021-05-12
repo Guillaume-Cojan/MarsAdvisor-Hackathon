@@ -12,7 +12,7 @@ const memberInfo = [
   {
     name: "Guillaume",
     surname: "Cojan",
-    img: "https://i.ibb.co/4dfDK04/Portrait-picture-Francesco-Luciani-copia.jpg",
+    img: "https://res.cloudinary.com/dnefeccae/image/upload/v1620765869/helenpictures/guillaume_y4elsp.jpg",
     linkedin: "https://www.linkedin.com/in/guillaumecojan/",
     github: "https://github.com/Guillaume-Cojan",
   },

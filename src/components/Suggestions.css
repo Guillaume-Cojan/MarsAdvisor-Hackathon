@@ -1,0 +1,31 @@
+p {
+  columns: black;
+}
+
+.suggestion-img {
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+}
+
+.suggestions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.suggestion-card {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: 10px;
+}
+
+h1 {
+  margin: 20px;
+}
+
