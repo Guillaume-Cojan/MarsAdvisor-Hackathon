@@ -4,11 +4,12 @@
   left: 0;
   padding: 1rem;
   text-align: center;
-  background-color: #7B1B7A;
+  background-color: #7b1b7a;
 }
 
 .title-footer {
   padding: 1.5em;
+  color: white;
 }
 
 .icons-footer {
@@ -21,6 +22,7 @@
   margin: 0 10px 30px 10px;
   font-size: 20px;
   margin-bottom: 30px;
+  color: white;
 }
 
 .icons-footer :hover {
@@ -32,4 +34,5 @@
   padding: 10px 0;
   text-align: center;
   font-size: 10px;
+  color:white;
 }
