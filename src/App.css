@@ -1,180 +1,182 @@
 /*STYLING OF COUNTDOWN COMPONENT*/
 
 .h2-countdown {
-    color: #1b0317;
+  color: #1b0317;
 }
 
 .countdown-desktop {
-    border: 2px solid #7b1b7a;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 10px;
+  border: 2px solid #7b1b7a;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
 }
 
 .countdown-desktop-1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .countdown-img {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
 }
 .table {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 .countdown-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
 }
 
 .flight-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .flight-from,
 .flight-to,
 .flight-ship,
 .flight-airline {
-    width: 100%;
-    border: 1px solid black;
-    margin: 5px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
+  width: 100%;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .timer {
-    font-family: "Audiowide", cursive;
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  font-family: "Audiowide", cursive;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 tr {
-    width: 600px;
+  width: 600px;
 }
 
 th {
-    background-color: #7b1b7a;
-    color: white;
-    width: 25%;
+  background-color: #7b1b7a;
+  color: white;
+  width: 25%;
 }
 
 td {
-    width: 25%;
-    text-align: center;
+  width: 25%;
+  text-align: center;
 }
 
 /*STYLING OF  IMAGE COMPONENT*/
 
 .img-hd {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
 }
 
 .img-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.img-title {
+  text-align: center;
+}
+
+.img-explanation {
+  text-align: justify;
+}
+
+.add-favorite {
+  background-color: violet;
+  border: 1px solid #7b1b7a;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+  .countdown-desktop {
+    display: none;
+  }
+
+  .countdown-mobile {
+    border: 2px solid #7b1b7a;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
-}
+    margin: 20px;
+    padding: 10px;
+  }
+  .timer {
+    font-family: "Audiowide", cursive;
+    font-size: 12px;
+  }
+  .countdown-img {
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+  }
 
-.img-title {
+  .countdown-mobile-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .countdown-info {
+    width: 200px;
+  }
+  .h2-mobile {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    margin: 0;
+  }
+  .p-mobile {
+    font-size: 12px;
+    color: white;
+  }
+  .table-mobile {
+    display: flex;
+  }
+  .table-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px;
     text-align: center;
-}
-
-.img-explanation {
-    text-align: justify;
-}
-
-.add-favorite {
-    background-color: violet;
-    border: 1px solid #7b1b7a;
-    border-radius: 15px;
-    margin: 5px;
-    padding: 6px;
-}
-
-@media only screen and (max-width: 600px) {
-    .countdown-desktop {
-        display: none;
-    }
-
-    .countdown-mobile {
-        border: 2px solid #7b1b7a;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 20px;
-        padding: 10px;
-    }
-    .timer {
-        font-family: "Audiowide", cursive;
-        font-size: 12px;
-    }
-    .countdown-img {
-        width: 60px;
-        height: 60px;
-        padding: 0px;
-    }
-
-    .countdown-mobile-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding-bottom: 0;
-    }
-    .countdown-info {
-        width: 200px;
-    }
-    .h2-mobile {
-        color: rgb(255, 255, 255);
-        font-size: 14px;
-        margin: 0;
-    }
-    .p-mobile {
-        font-size: 12px;
-        color: white;
-    }
-    .table-mobile {
-        display: flex;
-    }
-    .table-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 2px;
-        text-align: center;
-        background-color: #7b1b7a;
-        padding: 2px;
-    }
+    background-color: #7b1b7a;
+    padding: 2px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-    .countdown-mobile {
-        display: none;
-    }
+  .countdown-mobile {
+    display: none;
+  }
 }

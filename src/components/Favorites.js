@@ -1,7 +1,7 @@
+import {useState} from "react";
 
 
-
-function Favorites( ) {
+function Favorites({} ) {
     return (
         
         
