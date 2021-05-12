@@ -12,13 +12,14 @@ import Contact from "./components/Contact/Contact";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
-import SuggestionDetails from "./components/SuggestionDetails"
+import SuggestionDetails from "./components/SuggestionDetails";
 
 library.add(fab, faCheckSquare);
 
 function App() {
   const [images, setImages] = useState([]);
   const [selectedPlanet, setSelectedPlanet] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   function handleSelectedPlanet(key) {
     setSelectedPlanet(key.target.id);
@@ -32,15 +33,10 @@ function App() {
       .then((data) => setImages(data));
   };
 
-  useEffect(getData, []);
-
-  const [favorites, setFavorites] = useState([]);
   const handleFavorite = (newFav) => {
-    setFavorites([...favorites], newFav);
+    setFavorites([...favorites, newFav]);
   };
 
-  console.log(images);
-  console.log(favorites);
   return (
     <div className="App">
       <Navbar />
@@ -53,8 +49,8 @@ function App() {
         <Route path="/planet">
           <ImageList images={images} selectedPlanet={selectedPlanet} />
         </Route>
-        {/* <Route
-          path="/:date"
+        <Route
+          exact path="/:date"
           render={(routeProps) => (
             <Image
               routeProps={routeProps}
@@ -62,13 +58,11 @@ function App() {
               handleFavorite={handleFavorite}
             />
           )}
-        /> */}
+        />
         <Route path="/favorites">
           <Favorites favoritesList={favorites} />
         </Route>
-        <Route path="/suggestion/:id">
-          <SuggestionDetails />
-        </Route>
+        <Route path="/suggestion/:id" component={SuggestionDetails} />
       </Switch>
       <Footer />
     </div>

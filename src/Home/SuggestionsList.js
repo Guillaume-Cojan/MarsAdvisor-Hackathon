@@ -32,7 +32,9 @@ function SuggestionsList() {
   return (
     <div className="suggestions-container">
       {suggested.map((suggestion) => (
-        <Link to={`/suggestion/${suggestion.id}`}><Suggestion title={suggestion.title} image={suggestion.image} id={suggestion.id} /></Link>
+        <Link to={`/suggestion/${suggestion.id}`}>
+          <Suggestion title={suggestion.title} image={suggestion.image} id={suggestion.id} />
+        </Link>
       ))}
     </div>
   );
