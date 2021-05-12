@@ -33,42 +33,46 @@ function App() {
 
   useEffect(getData, []);
 
-  const [favorites, setFavorites] = useState([""]);
-  const handleFavorite = (imageInfo) => {
-    console.log(imageInfo);
-    setFavorites(...favorites, imageInfo.target.id);
-  };
-  console.log(favorites);
-  console.log(images);
-  return (
-    <div className="App">
-      <Navbar />
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route exact path="/">
-          <Home handleSelectedPlanet={handleSelectedPlanet} />
-        </Route>
-        <Route path="/planet">
-          <ImageList images={images} selectedPlanet={selectedPlanet} />
-        </Route>
-        <Route
-          path="/:date"
-          render={(routeProps) => (
-            <Image
-              routeProps={routeProps}
-              images={images}
-              handleFavorite={handleFavorite}
-            />
-          )}
-        />
-        <Route path="/favorites">
-          <Favorites favoritesList={favorites} />
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
-  );
+
+    const [favorites, setFavorites] = useState([]);
+    const handleFavorite = (newFav) => {
+        setFavorites([...favorites], newFav);
+    };
+
+    console.log(images);
+    console.log(favorites);
+    return (
+        <div className="App">
+            <Navbar />
+            <Switch>
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route exact path="/">
+                    <Home handleSelectedPlanet={handleSelectedPlanet} />
+                </Route>
+                <Route path="/planet">
+                    <ImageList
+                        images={images}
+                        selectedPlanet={selectedPlanet}
+                    />
+                </Route>
+                <Route
+                    path="/:date"
+                    render={(routeProps) => (
+                        <Image
+                            routeProps={routeProps}
+                            images={images}
+                            handleFavorite={handleFavorite}
+                        />
+                    )}
+                />
+                <Route path="/favorites">
+                    <Favorites favoritesList={favorites} />
+                </Route>
+            </Switch>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
