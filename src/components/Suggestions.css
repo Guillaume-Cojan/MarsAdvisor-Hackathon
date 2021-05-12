@@ -1,31 +1,28 @@
 p {
-  columns: black;
+    columns: black;
 }
 
 .suggestion-img {
-  width: 200px;
-  height: 200px;
-  margin: 30px;
+    width: 10px;
+    height: 10px;
+    margin: 30px;
 }
 
 .suggestions-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .suggestion-card {
-  background-color: aqua;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 40%;
-  margin: 10px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 220px;
+    margin: 10px;
 }
 
 h1 {
-  margin: 20px;
+    margin: 20px;
 }
-

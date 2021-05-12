@@ -1,8 +1,21 @@
-.img-suggestion-details {
-    width: 200px;
+.SuggestionDetails-container {
+    display: flex;
+}
 
+.img-suggestion-details {
+    max-width: 300px;
+    margin-bottom: 40px;
 }
 
 .SuggestionDetails-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.img-title {
+    text-align: center;
+    color: #7b1b7a;
 }
