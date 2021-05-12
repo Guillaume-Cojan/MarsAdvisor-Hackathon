@@ -33,14 +33,13 @@ function App() {
 
     useEffect(getData, []);
 
-
     const [favorites, setFavorites] = useState([]);
-    const handleFavorite = (imageInfo) => {
-        setFavorites([...favorites], imageInfo);
+    const handleFavorite = (newFav) => {
+        setFavorites([...favorites], newFav);
     };
 
-
     console.log(images);
+    console.log(favorites);
     return (
         <div className="App">
             <Navbar />
