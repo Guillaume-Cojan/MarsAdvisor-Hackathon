@@ -4,7 +4,7 @@ import ImageCard from "./ImageCard";
 
 function ImageList({ images, selectedPlanet }) {
   return (
-    <div>
+    <div className="list-container">
       <h3> Explore Mars!</h3>
       <div className="ImageList-container">
         {images

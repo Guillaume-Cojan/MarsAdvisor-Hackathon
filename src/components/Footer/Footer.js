@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Footer() {
   return (
     <div className="footer-container">
-      <hr />
       <h10 className="title-footer">MarsAdvisor</h10>
 
       <div className="icons">

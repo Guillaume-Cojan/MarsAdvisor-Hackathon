@@ -1,3 +1,9 @@
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  align-items: center;
+}
 .image-container {
   width: 200px;
 }
@@ -11,10 +17,21 @@
 .ImageList-container {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  justify-content: center;
 }
 
 .images-container {
-  margin: 20px;
-  border: 1px solid lightgrey;
   padding: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .image-card {
+    width: 90%;
+    height: 200px;
+    margin: 10px;
+  }
+  .image-cardcontainer {
+    width: 90%;
+    margin: 10px;
+  }
 }
