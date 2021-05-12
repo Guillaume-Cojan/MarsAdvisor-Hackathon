@@ -84,10 +84,15 @@ td {
 
 /*STYLING OF  IMAGE COMPONENT*/
 
+.img-component-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .img-hd {
-  width: 100%;
-  display: flex;
-  flex-flow: wrap;
+    max-width: 500px;
+    margin-bottom: 40px;
 }
 
 .img-details-container {
@@ -100,19 +105,23 @@ td {
 }
 
 .img-title {
-  text-align: center;
+    text-align: center;
+    color: #7b1b7a;
 }
 
 .img-explanation {
-  text-align: justify;
+    text-align: justify;
+    width: 90%;
+    max-width: 700px;
 }
 
 .add-favorite {
-  background-color: violet;
-  border: 1px solid #7b1b7a;
-  border-radius: 15px;
-  margin: 5px;
-  padding: 6px;
+    background-color: violet;
+    border: 1px solid #7b1b7a;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 6px;
 }
 
 @media only screen and (max-width: 600px) {
