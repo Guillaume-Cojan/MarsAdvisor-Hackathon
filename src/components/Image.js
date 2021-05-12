@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Image = ({ date, images, routeProps, handleFavorite, imageInfo }) => {
+const Image = ({ images, routeProps, handleFavorite }) => {
     const foundMatch = images.find(
         (image) => image.date == routeProps.match.params.date
     );
@@ -8,7 +8,7 @@ const Image = ({ date, images, routeProps, handleFavorite, imageInfo }) => {
 
     const handleClick = () => {
         setIsFavorite(!isFavorite);
-        handleFavorite(imageInfo);
+        handleFavorite(foundMatch);
     };
 
     return (
@@ -27,7 +27,7 @@ const Image = ({ date, images, routeProps, handleFavorite, imageInfo }) => {
                 <div
                     className="add-favorite"
                     id={foundMatch.title}
-                    onClick={handleFavorite}
+                    onClick={handleClick}
                 >
                     Add this Picture to My Favorites: {isFavorite ? "💜" : "🤍"}
                 </div>
