@@ -4,9 +4,10 @@ import ImageCard from "./ImageCard";
 
 function ImageList({ images, selectedPlanet }) {
   return (
-    <div className="list-container">
-      <h3> Explore Mars!</h3>
-      <div className="ImageList-container">
+
+    <div>
+      <h3> Explore {selectedPlanet}!</h3>
+      <div className="explore-container">
         {images
           .filter((image) => image.explanation.includes(`${selectedPlanet}`))
           .filter((image) => image.media_type === "image")

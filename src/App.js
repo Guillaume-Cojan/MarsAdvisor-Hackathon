@@ -23,24 +23,24 @@ function App() {
     setSelectedPlanet(key.target.id);
   }
 
-    const getData = () => {
-        fetch(
-            "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
-        )
-            .then((response) => response.json())
-            .then((data) => setImages(data));
-    };
+  const getData = () => {
+    fetch(
+      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
+    )
+      .then((response) => response.json())
+      .then((data) => setImages(data));
+  };
 
-    useEffect(getData, []);
+  useEffect(getData, []);
 
 
     const [favorites, setFavorites] = useState([]);
-    const handleFavorite = (imageInfo) => {
-        setFavorites([...favorites], imageInfo);
+    const handleFavorite = (newFav) => {
+        setFavorites([...favorites], newFav);
     };
 
-
     console.log(images);
+    console.log(favorites);
     return (
         <div className="App">
             <Navbar />

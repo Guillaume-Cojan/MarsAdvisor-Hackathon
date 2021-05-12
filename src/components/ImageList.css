@@ -24,14 +24,40 @@
 .images-container {
   padding: 10px;
 }
-@media only screen and (max-width: 600px) {
-  .image-card {
-    width: 90%;
-    height: 200px;
-    margin: 10px;
-  }
-  .image-cardcontainer {
-    width: 90%;
-    margin: 10px;
+
+
+.explore-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.explore-card {
+  background-color: #7b1b7a;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: 10px;
+  border: 3px solid #86d41a;
+}
+h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .explore-card {
+    background-color: #7b1b7a;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 20px auto;
+    border: 3px solid #86d41a;
   }
 }
