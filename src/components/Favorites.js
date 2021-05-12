@@ -1,19 +1,23 @@
+import { useState } from "react";
+import ImageCard from "./ImageCard";
 
-
-
-function Favorites( ) {
-    return (
-        
-        
-        <div className="title-myfavourites">
-        <p>My Favorites</p>
-        <div className="image-myfav"></div>
-        <img >
-        </img>
-        
+function Favorites({ favoritesList }) {
+  return (
+    <div>
+      <div className="title-myfavourites">
+        <div className="image-fav">
+          {favoritesList.map((card) => {
+            <img
+              className="explore-img"
+              src={card.url}
+              image={card.image}
+              alt="planet image"
+            />;
+          })}
+        </div>
+      </div>
     </div>
-    
-    );
+  );
 }
 
 export default Favorites;
