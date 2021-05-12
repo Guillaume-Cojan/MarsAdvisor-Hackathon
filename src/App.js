@@ -33,6 +33,8 @@ function App() {
       .then((data) => setImages(data));
   };
 
+  useEffect(getData, []);
+
   const handleFavorite = (newFav) => {
     setFavorites([...favorites, newFav]);
   };
@@ -50,7 +52,8 @@ function App() {
           <ImageList images={images} selectedPlanet={selectedPlanet} />
         </Route>
         <Route
-          exact path="/:date"
+          exact
+          path="/:date"
           render={(routeProps) => (
             <Image
               routeProps={routeProps}
