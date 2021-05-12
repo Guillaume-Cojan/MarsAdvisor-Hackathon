@@ -16,27 +16,26 @@ import { faCheckSquare } from "@fortawesome/free-solid-svg-icons";
 library.add(fab, faCheckSquare);
 
 function App() {
-  const [images, setImages] = useState([]);
-  const [selectedPlanet, setSelectedPlanet] = useState("");
-
-  function handleSelectedPlanet(key) {
-    setSelectedPlanet(key.target.id);
-  }
-
-  const getData = () => {
-    fetch(
-      "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
-    )
-      .then((response) => response.json())
-      .then((data) => setImages(data));
-  };
-
-  useEffect(getData, []);
-
-
+    const [images, setImages] = useState([]);
+    const [selectedPlanet, setSelectedPlanet] = useState("");
     const [favorites, setFavorites] = useState([]);
+
+    function handleSelectedPlanet(key) {
+        setSelectedPlanet(key.target.id);
+    }
+
+    const getData = () => {
+        fetch(
+            "https://api.nasa.gov/planetary/apod?api_key=FluwJbwclx3iw8xluHvmGVHaMHi3c8oTYbOYkjDh&start_date=2021-02-10&end_date=2021-05-10"
+        )
+            .then((response) => response.json())
+            .then((data) => setImages(data));
+    };
+
+    useEffect(getData, []);
+
     const handleFavorite = (newFav) => {
-        setFavorites([...favorites], newFav);
+        setFavorites([...favorites, newFav]);
     };
 
     console.log(images);
