@@ -19,7 +19,7 @@ const Contact = () => {
 
       <div className="contact-us">
         <h1 className="claim">
-          We like food, movies and... friends! Get in contact!
+          Contact Us!
         </h1>
       </div>
 
